@@ -19,16 +19,14 @@ caso o números de votos a favor passe de dois terços do tamanho do time, ou "a
 #include<stdio.h>
 
 int main(){
-   int numMembros, voto, i;
-   float aux, votosParaGanhar;
+   int numMembros, voto, i,aux;
     while(scanf(" %d",&numMembros)!=EOF){
         aux = 0;
-        votosParaGanhar = numMembros*(float)2/3;
         for(i=0;i<numMembros;i++){
             scanf(" %d",&voto);
             aux = aux + voto;
         }
-        if(aux>=votosParaGanhar){
+        if(aux>=(numMembros*(float)2/3)){
             printf("impeachment\n");
         }
         else{
