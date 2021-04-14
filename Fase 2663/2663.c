@@ -6,6 +6,7 @@ int main () {
 
  scanf("%d", &n);
  scanf("%d", &k);
+ 
 
  for (i=0; i<n; i++) {
 
@@ -13,9 +14,9 @@ int main () {
 
  }
  
-  int armazena;
+int armazena, j;
  
-for(int j=0; j<n; j++) {
+for(j=0; j<n; j++) {
     for (i = j+1; i<n; i++) {
 
         if (n_vetor[j] <  n_vetor[i]) {
