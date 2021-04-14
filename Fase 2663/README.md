@@ -12,7 +12,7 @@ int n, k, n_vetor[1000], i;
 ```
 #### Leitura das Entradas
 
-As leituras de N, K e as notas indivudias de cada cadidato serão feitas pela função "scanf" da linguagem C, seguindo suas respectivas ordens de leitura. Entretanto, para a leitura das notas individuais será utilizado também um loop com o "for" com contador 'i' inde de 0 até 'n', em que a cada ciclo do loop será feita a leitura da nota de um candidato e armazenado seu valor na posição correspondente do vetor 'n_vetor[i]'.  Note que a variável 'i', sendo nosso contador, a cada loop do ciclo é incrementado em 1 seu valor, e também corresponde a posição em que será armazenado a nota do participante.
+As leituras de N, K e as notas indivudias de cada cadidato serão feitas pela função "scanf" da linguagem C, seguindo suas respectivas ordens de leitura. Entretanto, para a leitura das notas individuais será utilizado também um loop com o "for" com contador 'i' indo de 0 até 'n', em que a cada ciclo do loop será feita a leitura da nota de um candidato e armazenado seu valor na posição correspondente do vetor 'n_vetor[i]'.  Note que a variável 'i', sendo nosso contador, a cada loop do ciclo é incrementado em 1 seu valor, e também corresponde a posição em que será armazenado a nota do participante.
 
 ```{r, attr.source='.numberLines'}
  scanf("%d", &n);
