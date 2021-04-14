@@ -18,7 +18,7 @@ As leituras de N, K e as notas indivudias de cada cadidato serão feitas pela fu
  scanf("%d", &n);
  scanf("%d", &k);
 
- for (int i=0; i<n; i++) {
+ for (i=0; i<n; i++) {
      scanf("%d", &n_vetor[i]);
  }
 ```
@@ -27,9 +27,9 @@ As leituras de N, K e as notas indivudias de cada cadidato serão feitas pela fu
 Agora com todas a entradas lidas, vamos ordenar o vetor com as notas de cada candidado em ordem decresente, pois assim, após a ordenação saberemos que na posição do vetor "n_vetor[k-1]" teremos exatante a nota do último participante classificado!  Portanto, para a ordenação temos:
 
  ```{r, attr.source='.numberLines'}
-int armazena;
+int armazena, j;
  
-for(int j=0; j<n; j++) {
+for(j=0; j<n; j++) {
     for (i = j+1; i<n; i++) {
 
         if (n_vetor[j] <  n_vetor[i]) {
