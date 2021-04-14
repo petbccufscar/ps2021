@@ -2,7 +2,7 @@
 ### URI - Fase 2663
 
 #### Entendendo o problema 
-Primeiramente, o exercício nos apresenta uma competição em uma olímpiada em que participarão até 1000 candidatos (N), tendo entre estes um certo número de aprovados (K) para a próxima etapa. Entretando, caso haja mais candidatos com a mesma nota do último classificado, ocorrendo assim um empate, todos com essa mesma nota passão também para a próxima etapa, mesmo que ultrapasse a quantidade de aprovados estimada anteriormente (K). O algoritmo ao final terá como saída o número de classificados para a próxima entrada
+Primeiramente, o exercício nos apresenta uma competição em uma olímpiada em que participarão até 1000 candidatos (N), tendo entre estes um certo número de aprovados (K) para a próxima etapa. Entretando, caso haja mais candidatos com a mesma nota do último classificado, ocorrendo assim um empate, todos com essa mesma nota passão também para a próxima etapa, mesmo que ultrapasse a quantidade de aprovados estimada anteriormente (K). O algoritmo ao final terá como saída o número de classificados para a próxima etapa.
 
 #### Entradas 
 Como os dados de entrada serão lidos na sequência: N, K e nota de cada um dos candidatos participantes. Serão primeiramente declaradas as variáveis inteiras 'n' (Número de Candidatos), 'k' (quantidade de aprovados para a próxima etapa) e um vetor 'n_vetor[1000]' de 1001 posições, pois terão até 1000 particiantes (N), que armazenará cada nota individual de todos os candidatos; e a variável 'i' que será nosso contador.
