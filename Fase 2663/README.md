@@ -107,3 +107,4 @@ while(n_vetor[k-1] == n_vetor[k-1+i]) {
    ```{r, attr.source='.numberLines'}
 printf("%d\n", classificados);
 ```
+
