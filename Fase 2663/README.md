@@ -24,7 +24,7 @@ As leituras de N, K e as notas indivudias de cada cadidato serão feitas pela fu
 ```
 
 #### Ordenação do vetor
-Agora com todas a entradas lidas, vamos ordenar o vetor com as notas de cada candidado em ordem decresente, pois assim, após a ordenação saberemos que na posição do vetor "n_vetor[k-1]" teremos exatamente a nota do último participante classificado!  Portanto, para a ordenação temos:
+Agora com todas a entradas lidas, vamos ordenar o vetor com as notas de cada candidado em ordem decresente, pois assim, após a ordenação saberemos que na posição do vetor "n_vetor[k-1]" teremos exatamente a nota do último participante classificado!  Portanto, para a ordenação, temos:
 
  ```{r, attr.source='.numberLines'}
 int armazena, j;
