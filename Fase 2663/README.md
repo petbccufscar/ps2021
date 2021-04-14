@@ -87,7 +87,7 @@ Bom, como agora temos nosso vetor em ordem decrescente, sabemos que serão aprov
 int classificados = k;
 ```
 
- Agora, vamos verificar no vetor se há mais candidatos com a mesma nota do último classificado 'n_vetor[k-1]'. Portanto criamos o loop coma função 'while', que sempre realizará  a comparação ao inicio do laço, e inicializamos o contador 'i = 1'. A comparação é feita pelo '(n_vetor[k-1] == n_vetor[k-1+i])', em que compara a cada laço se há notas iguais ao do último colocado 'n_vetor[k-1]' com os os classificados nas próximas posições 'n_vetor[k-1+i]'. Como 'i' inicializa em 1, já no primeiro loop comparamos a nota do último classificado com a do particiante seguinte no vertor 'n_vetor[k-1+1]', assim a cada laço, caso haja mais candidatos com essa mesma nota, incrementeamos 1 à variável 'classificados', com 'classificados++', somando assim em 1 o número total de participantes para a próxima etapa. E também incrementamos em 1 o contador 'i', para ser realizado a comparação com a próxima posição do vetor 'n_vetor[k-1+i}', assim enquanto houver notas iguais a do último classificado loop continua, sendo interrompido quando não houver mais notas iguais. Temos:
+ Agora, vamos verificar no vetor se há mais candidatos com a mesma nota do último classificado 'n_vetor[k-1]'. Assim, criamos o loop coma função 'while', que sempre realizará  a comparação ao início do laço, e inicializamos o contador 'i = 1'. A comparação é feita pelo '(n_vetor[k-1] == n_vetor[k-1+i])', em que compara a cada laço se há notas iguais ao do último colocado 'n_vetor[k-1]' com os os classificados nas próximas posições 'n_vetor[k-1+i]'. Como 'i' inicializa em 1, já no primeiro loop comparamos a nota do último classificado com a do particiante seguinte no vetor 'n_vetor[k-1+1]', desta maneira, a cada laço, caso haja mais candidatos com essa mesma nota, incrementeamos 1 à variável 'classificados', com 'classificados++', somando assim em 1 o número total de participantes para a próxima etapa. E também incrementamos em 1 o contador 'i', para ser realizado a comparação com a próxima posição do vetor 'n_vetor[k-1+i}', assim enquanto houver notas iguais a do último classificado loop continua, sendo interrompido quando não houver mais notas iguais. Temos:
 
    ```{r, attr.source='.numberLines'}
 int classificados = k;
@@ -102,7 +102,7 @@ while(n_vetor[k-1] == n_vetor[k-1+i]) {
 
 #### Output
 
- Portanto, ao final temos na variável 'classificados' com o número exato de participantes classificados para a próxima etapa, respeitando a ordem de empate do último classificado. Retornando assim seu valor como *output* utilizando a função 'printf':
+ Portanto, ao final temos na variável 'classificados' o número exato de participantes classificados para a próxima etapa, respeitando a ordem de empate do último classificado. Retornando assim seu valor como *output* utilizando a função 'printf':
 
    ```{r, attr.source='.numberLines'}
 printf("%d\n", classificados);
