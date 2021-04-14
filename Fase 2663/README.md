@@ -77,7 +77,7 @@ Primeiramente é declarado a variável inteira 'armazena' que simplesmente nos s
         }
 ```
 
-Assim, ao final de ambos os loops, teremos o vetor ordenado, pois foram feitas as comparações entre todas as posições do vetor, e colocado sempre o maior valor na posição 'j' do vetor a cada loop. Tendo ao fim nosso vetor ordenado em ordem decrescente de notas dos candidatos.
+Assim, ao final de ambos os loops, teremos o vetor ordenado em ordem decrescente de notas dos candidatos, pois foram feitas as comparações entre todas as posições do vetor, e colocado sempre o maior valor na posição 'j' do vetor a cada loop.
 
 ### Encontrado quantos participantes irão para a próxima fase
 
