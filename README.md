@@ -24,10 +24,16 @@ scanf("%d", &n);
 ```
 #### PARTE 2:
 Após mapeado a posição das câmeras, o código testará se a quadra está segura ou não, dentro de uma laço "for" é lido quatro posições do array(as quais indicam as quatro esquinas da quadra).
-Exemplo:
+Exemplo de quadra __segura__:
 0 | 1
 ---|---
 1 | 0
+
+Exemplo de quadra __não segura__:
+1 | 0    
+---|---  
+0 | 0
+
 ```
 for(i=0; i<n; i++)
     {
