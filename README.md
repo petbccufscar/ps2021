@@ -23,13 +23,15 @@ scanf("%d", &n);
             scanf("%d", &rua[i][j]);
 ```
 #### PARTE 2:
-Após mapeado a posição das câmeras, o código testará se a quadra está segura ou não, dentro de uma laço "for" é lido quatro posições do array(as quais indicam as quatro esquinas da quadra).
+Após mapeado a posição das câmeras, o código testará se a quadra está segura ou não, dentro de uma laço "for" e com o comando if é lido quatro posições do array(as quais indicam as quatro esquinas da quadra), se a condição `rua[i][j]+rua[i][j+1]+rua[i+1][j]+rua[i+1][j+1]` é menor que 2, ou seja, testa-se se há menos de 2 câmeras em cada quadra, então imprime-se na tela "U", o que indica que a quadra não está segura, se falso a condição, imprime-se "S", indicando que a quadra está segura.
 ```
 for(i=0; i<n; i++)
     {
         for(j=0; j<n; j++)
         {
             if(rua[i][j]+rua[i][j+1]+rua[i+1][j]+rua[i+1][j+1] < 2)
+              printf("U");
+            else printf("S");
 ```
 Exemplo de quadra __segura__:
 0 | 1
