@@ -8,9 +8,16 @@ quando houver 2 ou mais câmeras nela instaladas.
 ### Código:
 
 #### Entradas:
-N
+São declaradas 3 variáveis, n, irá definir quantas quadras temos, se n = 1, teremos 1 quadra, se n = 2, teremos 4 quadras, se n = 3, serão 9 quadras, ou seja, o número de quadras, é definido por n². As variáveis i e j, auxiliaram na montagem do mapa. Posteriormente lê-se o valor de n.
 ```
-int n, i, j;
-    scanf("%d", &n);
-    
+int n, i, j; 
+```
+#### PARTE 1:
+
+```
+scanf("%d", &n);
+    int rua[n+1][n+1];
+    for(i=0; i<=n; i++)
+        for(j=0; j<=n; j++)
+            scanf("%d", &rua[i][j]);
 ```
