@@ -1,33 +1,44 @@
-## Instruções
+## EXERCÍCIO URI 2168
 
-1. **Entre ou crie** uma conta no github;
-    - [Criar conta](https://github.com/join)  
+### PROBLEMA
+Serão instaladas câmeras nas esquinas das ruas do centro de _Portland_, devido a invasão de vampiros e lobisomens. Teremos que a partir do mapa disponibilizado pela prefeitura,
+onde nos dirá em quais esquinas foram instalada as câmeras definir se a quadra está segura(S) ou se não está segura(U), levando em consideração que uma quadra só estará segura
+quando houver 2 ou mais câmeras nela instaladas.
 
-2. **Acesse o link** do repositório, enviado por email;
-> Um repositório é um diretório usado para armazenar os arquivos de um projeto,
-> sejam códigos, textos, imagens, entre outros.
-> Com o git, é possível manter controle sobre todas as alterações e
-> contribuições do projeto.
-3. Crie um **fork** do repositório original;
-> Forks são ramificações de um repositório. Podem dar origem a projetos novos
-> ou incrementos no projeto original.  
-> Na prática, o fork cria uma cópia do projeto original na sua conta do GitHub,
-> onde você pode fazer quaisquer alterações que desejar.  
-4. Crie uma **pasta** e os arquivos `.c` e `.md`;
-    - Tudo deve ser criado no seu fork;
-    - Pode ser criado dentro do GitHub ou no seu computador, devendo ser carregado no site posteriormente;
-    - O nome do arquivo `.c` deve ser o número do seu exercício;
-    - O arquivo com as instruções deve obrigatoriamente chamar `README.md`;  
+### CÓDIGO
 
-5. O GitHub faz a formatação textos utilizando a linguagem Markdown;
-    - As tags principais podem ser encontradas no link [Markdown Cheatsheet](https://bit.ly/2Bsdi4D);
-    - Existem editores de Markdown Online, como o [Dillinger](https://dillinger.io/) e o [Editor.md](https://pandao.github.io/editor.md/en.html)
-    - O próprio GitHub tem a opção de visualizar a formatação, clicando em **preview** enquanto edita o arquivo `.md`;  
+#### DADOS DE ENTRADAS:
+São declaradas 3 variáveis, n, irá definir quantas quadras temos, se n = 1, teremos 1 quadra, se n = 2, teremos 4 quadras, se n = 3, serão 9 quadras, ou seja, o número de quadras, é definido por n². As variáveis i e j, auxiliarão na montagem do mapa(matriz).
+```
+int n, i, j; 
+```
 
-6. **Confira** se os dois arquivos estão no seu **fork**, *revise-os se necessário*;  
+#### PARTE 1:
+Primeiramente, lê-se o valor de n, posteriormente, declara-se a matriz(rua) `int rua[n+1][n+1]`(o primeiro `[n+1]` defini a quantidade de linhas e o segundo `[n+1]` a quantidade de colunas da matriz(rua)),em seguida dentro de um laço "for" é preenchido os valores dos endereços da matriz(rua), o qual irá mapear onde estão instaladas as câmeras.
+```
+scanf("%d", &n);
+    int rua[n+1][n+1];
+    for(i=0; i<=n; i++)
+        for(j=0; j<=n; j++)
+            scanf("%d", &rua[i][j]);
+```
+#### PARTE 2 e DADOS DE SAÍDA:
+Após mapeado a posição das câmeras, o código testará se a quadra está segura ou não, dentro de uma laço "for" e com o comando if, é lido quatro posições da matriz(as quais indicam as quatro esquinas da quadra), se a condição `(rua[i][j]+rua[i][j+1]+rua[i+1][j]+rua[i+1][j+1])` é menor que 2, ou seja, testa-se se há menos de 2 câmeras em cada quadra, então será impresso no monitor "U", o que indica que a quadra não está segura, se falso a condição, imprime-se "S", indicando que a quadra está segura. Assim acontecerá repetidamente para todas as quadras.
+```
+for(i=0; i<n; i++)
+    {
+        for(j=0; j<n; j++)
+        {
+            if(rua[i][j]+rua[i][j+1]+rua[i+1][j]+rua[i+1][j+1] < 2)
+              printf("U");
+            else printf("S");
+```
+Exemplo de quadra __segura__:
+0 | 1
+---|---
+1 | 0
 
-7. Retorne ao projeto original, pelo link enviado por email, e crie um novo **pull request**;
-    - Você deve escolher a opção **comparar entre forks** para criá-lo.  
-
-> Quando você faz alterações no seu fork, você pode solicitar que elas sejam incorporadas no projeto original.  
-> Um **pull request** faz essa solicitação. Suas alterações serão revisadas pelos responsáveis do projeto original, que podem aceitar, rejeitar ou sugerir mudanças na sua proposta.
+Exemplo de quadra __não segura__:
+1 | 0    
+---|---  
+0 | 0
